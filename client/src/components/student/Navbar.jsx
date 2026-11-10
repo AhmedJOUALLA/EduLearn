@@ -1,8 +1,12 @@
 import React from "react";
 import { assets } from "../../assets/assets";
 import {Link} from 'react-router-dom'
+import {userClerk,UserButton, useUser, useClerk} from '@clerk/clerk-react' 
+
 const Navbar = () => {
-  const isCourseListPage = location.pathname.includes('/course-list')
+  const isCourseListPage = location.pathname.includes('/course-list');
+
+  const {openSignIn} = useClerk() 
 
 
   return (

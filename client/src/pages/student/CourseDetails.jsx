@@ -33,7 +33,6 @@ const CourseDetails = () => {
       }
     ))
   }
-
   
   return courseData ? (
     <>
@@ -80,7 +79,7 @@ const CourseDetails = () => {
                   <div className="flex items-center justify-between px-4 py-3 cursor-pointer 
                     select-none" onClick={() => toggleSection(index)}>
                     <div className="flex items-center gap-2">
-                      <img src={assets.down_arrow_icon} alt="arrow_icon" />
+                      <img className={`transform trasition-transform ${openSections[index] ? 'rotate-180' : ''}`} src={assets.down_arrow_icon} alt="arrow_icon" />
                       <p className="font-medium md:text-base text-sm">{chapter.chapterTitle}</p>
                     </div>
                     <p className="text-sm md:text-default">{chapter.chapterContent.length} lectures - { calculateChapterTime(chapter)}</p>
